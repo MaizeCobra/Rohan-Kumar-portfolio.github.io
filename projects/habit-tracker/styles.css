@@ -1,0 +1,330 @@
+/* Base Styles */
+:root {
+    --primary-color: #4caf50; /* Green */
+    --secondary-color: #ff9800; /* Orange */
+    --background-color: #f4f4f4;
+    --surface-color: #ffffff;
+    --text-color: #333333;
+    --text-secondary: #757575;
+    --border-color: #e0e0e0;
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Main App */
+.habit-tracker-app {
+    background: var(--surface-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* Add Habit Section */
+.add-habit-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#newHabitInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+#newHabitInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #388e3c; /* Darker green */
+}
+
+.secondary-btn {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: #f57c00; /* Darker orange */
+}
+
+/* Habit List */
+.habit-list {
+    margin-bottom: 40px;
+}
+
+.habit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+.habit-item span {
+    font-size: 1.1rem;
+}
+
+.habit-actions button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: var(--transition);
+}
+
+.habit-actions .complete-btn:hover {
+    color: var(--primary-color);
+}
+
+.habit-actions .delete-btn:hover {
+    color: var(--secondary-color);
+}
+
+/* Calendar View */
+.calendar-view {
+    margin-bottom: 40px;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-controls button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#currentMonthYear {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-header {
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding-bottom: 10px;
+}
+
+.calendar-day {
+    padding: 10px 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-height: 50px; /* Ensure days have some height */
+    background-color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.calendar-day.other-month {
+    color: var(--text-secondary);
+    background-color: #f9f9f9;
+}
+
+.calendar-day.today {
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.calendar-day.completed {
+    background-color: #dcedc8; /* Light green */
+    border-color: var(--primary-color);
+}
+
+.calendar-day:not(.other-month):hover {
+    background-color: #e8f5e9; /* Lighter green on hover */
+}
+
+/* Stats Section */
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Placeholder Message */
+.placeholder-message {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 40px 20px;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+.placeholder-message i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .add-habit-section {
+        flex-direction: column;
+    }
+
+    #newHabitInput {
+        margin-bottom: 10px;
+    }
+
+    .stats-overview {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    }
+
+    .calendar-day {
+        padding: 8px 3px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-overview {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+
+    .calendar-grid {
+        gap: 3px;
+    }
+
+    .calendar-day {
+        padding: 5px 2px;
+        font-size: 0.8rem;
+        min-height: 40px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

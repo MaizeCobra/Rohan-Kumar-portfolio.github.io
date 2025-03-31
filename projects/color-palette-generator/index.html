@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Color Palette Generator</h1>
+            <p>Create beautiful color palettes for your projects</p>
+            <a href="../../index.html" class="back-btn">Back to Portfolio</a>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="generator-container">
+            <div class="palette-controls">
+                <div class="control-group">
+                    <label>Generation Method</label>
+                    <div class="method-selector">
+                        <button class="method-btn active" data-method="random">Random</button>
+                        <button class="method-btn" data-method="monochromatic">Monochromatic</button>
+                        <button class="method-btn" data-method="analogous">Analogous</button>
+                        <button class="method-btn" data-method="complementary">Complementary</button>
+                        <button class="method-btn" data-method="triadic">Triadic</button>
+                    </div>
+                </div>
+                
+                <div class="color-picker-container">
+                    <label>Base Color</label>
+                    <div class="color-input-group">
+                        <input type="color" id="baseColor" value="#6c63ff">
+                        <input type="text" id="hexColor" value="#6c63ff">
+                    </div>
+                </div>
+                
+                <div class="slider-container">
+                    <label>Number of Colors: <span id="colorsCount">5</span></label>
+                    <input type="range" id="colorCount" min="3" max="8" value="5" step="1">
+                </div>
+                
+                <button id="generateBtn" class="generate-btn">
+                    <i class="fas fa-random"></i> Generate New Palette
+                </button>
+                
+                <div class="palette-actions">
+                    <button id="saveBtn" class="action-btn">
+                        <i class="fas fa-save"></i> Save Palette
+                    </button>
+                    <button id="exportBtn" class="action-btn">
+                        <i class="fas fa-file-export"></i> Export CSS
+                    </button>
+                </div>
+            </div>
+            
+            <div class="palette-display" id="paletteDisplay">
+                <!-- Color palette will be displayed here -->
+            </div>
+        </div>
+        
+        <div class="saved-palettes-container">
+            <h2>Saved Palettes</h2>
+            <div class="saved-palettes-list" id="savedPalettes">
+                <!-- Saved palettes will appear here -->
+                <div class="placeholder-message">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Your saved palettes will appear here</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="modal" id="exportModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Export CSS Variables</h2>
+            <div class="code-container">
+                <pre id="cssCode">:root {
+  --color-1: #6c63ff;
+  --color-2: #8257fe;
+  --color-3: #9a4cfd;
+  --color-4: #b041fc;
+  --color-5: #c436fb;
+}</pre>
+                <button id="copyBtn" class="copy-btn">
+                    <i class="fas fa-copy"></i> Copy Code
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

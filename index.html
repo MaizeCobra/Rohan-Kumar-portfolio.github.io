@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Developer Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-text">Creative <span>Front-end</span> Developer</h1>
+                <p class="reveal-text delay-1">Building innovative and aesthetic web experiences</p>
+                <div class="cta-buttons reveal-text delay-2">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+            <div class="about-image">
+                    <div class="image-wrapper">
+                        <!-- Replaced placeholder with actual image, removed inline styles -->
+                        <img src="./Profile_picture.jpg" alt="Rohan Kumar Profile Picture">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Hi there! I'm a Front-end Developer</h3>
+                    <p>I create engaging digital experiences through clean code and creative problem-solving. With a focus on responsive design and modern technologies, I build applications that are both functional and visually appealing.</p>
+                    <p>I'm passionate about web animations, interactive interfaces, and creating seamless user experiences that delight users and solve real-world problems.</p>
+                    <p>Currently in my 3rd year pursuing B.Tech in Computer Science Engineering with specialization in Artificial Intelligence and Robotics at VIT.</p>
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span>Name:</span>
+                            <p>Rohan Kumar</p>
+                        </div>
+                        <div class="info-item">
+                            <span>Email:</span>
+                            <p>your.email@example.com</p>
+                        </div>
+                        <div class="info-item">
+                            <span>Location:</span>
+                            <p>Chennai, Tamil Nadu</p>
+                        </div>
+                        <div class="info-item">
+                            <span>Education:</span>
+                            <p>B.Tech CSE (AI&R), 3rd Year, VIT</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Interactive_resume_builder_pic.png" alt="Interactive Resume Builder Project Screenshot">
+                    </div>
+                    <div class="project-details">
+                        <h3>Interactive Resume Builder</h3>
+                        <p>A drag-and-drop resume creator with real-time preview, downloadable PDF export, and customizable templates</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/resume-builder/index.html" class="btn small-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/RohanKumar/resume-builder" class="btn small-btn secondary-btn" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Advanced_gradient_generator.png" alt="Advanced Gradient Generator Project Screenshot">
+                    </div>
+                    <div class="project-details">
+                        <h3>Advanced Gradient Generator</h3>
+                        <p>A tool to create and customize complex CSS gradients with animation capabilities and code export</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/gradient-generator/index.html" class="btn small-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/RohanKumar/gradient-generator" class="btn small-btn secondary-btn" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Color-pallete-generator.png" alt="Color Palette Generator Project Screenshot">
+                    </div>
+                    <div class="project-details">
+                        <h3>Color Palette Generator</h3>
+                        <p>A tool to create and save beautiful color palettes with different harmonies and export ready-to-use CSS variables</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/color-palette-generator/index.html" class="btn small-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/RohanKumar/color-palette-generator" class="btn small-btn secondary-btn" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./quiz_builder.png" alt="Interactive Quiz Builder Project Screenshot">
+                    </div>
+                    <div class="project-details">
+                        <h3>Interactive Quiz Builder</h3>
+                        <p>A platform to create, share, and take custom quizzes with different question types, themes, and instant scoring</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/quiz-builder/index.html" class="btn small-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/RohanKumar/quiz-builder" class="btn small-btn secondary-btn" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./Habit-Tracker.png" alt="Visual Habit Tracker Project Screenshot">
+                    </div>
+                    <div class="project-details">
+                        <h3>Visual Habit Tracker</h3>
+                        <p>A beautifully designed habit tracker with streak visualization, daily reminders, and progress analytics</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/habit-tracker/index.html" class="btn small-btn" target="_blank">Live Demo</a>
+                            <a href="https://github.com/RohanKumar/habit-tracker" class="btn small-btn secondary-btn" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-item">
+                        <span>HTML5</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>CSS3 / Sass</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript (ES6+)</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>React</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Tools & Libraries</h3>
+                    <div class="skill-item">
+                        <span>Git/GitHub</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Webpack/Vite</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Responsive Design</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>UI/UX Principles</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's work together</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>your.email@example.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Chennai, Tamil Nadu</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <p>B.Tech CSE (AI&R), VIT</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Rohan Kumar. All Rights Reserved.</p>
+                <div class="back-to-top">
+                    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

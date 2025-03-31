@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Visual Habit Tracker</h1>
+            <p>Track your habits visually and build streaks</p>
+            <a href="../../index.html" class="back-btn">Back to Portfolio</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="habit-tracker-app">
+            <h2>My Habits</h2>
+            <div class="add-habit-section">
+                <input type="text" id="newHabitInput" placeholder="Enter a new habit (e.g., Drink Water)">
+                <button id="addHabitBtn" class="btn primary-btn"><i class="fas fa-plus"></i> Add Habit</button>
+            </div>
+
+            <div class="habit-list" id="habitList">
+                <!-- Habit items will be added here -->
+                <div class="placeholder-message">
+                    <i class="fas fa-tasks"></i>
+                    <p>Add your first habit to start tracking!</p>
+                </div>
+            </div>
+
+            <div class="calendar-view">
+                <h2>Progress Calendar</h2>
+                <div class="calendar-controls">
+                    <button id="prevMonthBtn"><i class="fas fa-chevron-left"></i></button>
+                    <span id="currentMonthYear">April 2024</span>
+                    <button id="nextMonthBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar days will be generated here -->
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h2>Statistics</h2>
+                <div class="stats-overview">
+                    <div class="stat-card">
+                        <h3>Current Streak</h3>
+                        <p id="currentStreak">0 days</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Longest Streak</h3>
+                        <p id="longestStreak">0 days</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Completion Rate</h3>
+                        <p id="completionRate">0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Visual Habit Tracker</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

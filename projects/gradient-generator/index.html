@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Gradient Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Advanced Gradient Generator</h1>
+            <p>Create beautiful CSS gradients with just a few clicks</p>
+            <a href="../../index.html" class="back-btn">Back to Portfolio</a>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="gradient-builder">
+            <div class="gradient-preview" id="gradientPreview"></div>
+            
+            <div class="controls">
+                <div class="gradient-type">
+                    <h2>Gradient Type</h2>
+                    <div class="options">
+                        <button class="option active" data-type="linear">Linear</button>
+                        <button class="option" data-type="radial">Radial</button>
+                        <button class="option" data-type="conic">Conic</button>
+                    </div>
+                </div>
+                
+                <div class="gradient-direction" id="linearControls">
+                    <h2>Direction</h2>
+                    <div class="direction-controls">
+                        <button class="direction active" data-direction="to right">→</button>
+                        <button class="direction" data-direction="to bottom right">↘</button>
+                        <button class="direction" data-direction="to bottom">↓</button>
+                        <button class="direction" data-direction="to bottom left">↙</button>
+                        <button class="direction" data-direction="to left">←</button>
+                        <button class="direction" data-direction="to top left">↖</button>
+                        <button class="direction" data-direction="to top">↑</button>
+                        <button class="direction" data-direction="to top right">↗</button>
+                        <input type="range" id="angleSlider" min="0" max="359" value="90" class="angle-slider">
+                        <div class="angle-display"><span id="angleValue">90</span>°</div>
+                    </div>
+                </div>
+                
+                <div class="gradient-shape" id="radialControls" style="display: none;">
+                    <h2>Shape</h2>
+                    <div class="options">
+                        <button class="shape active" data-shape="circle">Circle</button>
+                        <button class="shape" data-shape="ellipse">Ellipse</button>
+                    </div>
+                </div>
+                
+                <div class="color-stops">
+                    <h2>Colors</h2>
+                    <div class="color-stop-container" id="colorStops">
+                        <div class="color-stop" data-id="stop1">
+                            <input type="color" value="#6c63ff" class="color-picker">
+                            <input type="number" value="0" min="0" max="100" class="position-input">
+                            <span class="position-label">%</span>
+                        </div>
+                        <div class="color-stop" data-id="stop2">
+                            <input type="color" value="#ff4e50" class="color-picker">
+                            <input type="number" value="100" min="0" max="100" class="position-input">
+                            <span class="position-label">%</span>
+                        </div>
+                    </div>
+                    <button class="add-color-btn" id="addColorStop">
+                        <i class="fas fa-plus"></i> Add Color
+                    </button>
+                </div>
+                
+                <div class="animation-controls">
+                    <h2>Animation</h2>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="enableAnimation">
+                        <label for="enableAnimation">Enable Animation</label>
+                    </div>
+                    <div class="animation-options" id="animationOptions" style="display: none;">
+                        <div class="form-group">
+                            <label for="animationDuration">Duration (seconds)</label>
+                            <input type="number" id="animationDuration" value="5" min="1" max="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="animationType">Animation Type</label>
+                            <select id="animationType">
+                                <option value="rotate">Rotate</option>
+                                <option value="shift">Shift Colors</option>
+                                <option value="pulse">Pulse</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="code-output">
+                <h2>CSS Code</h2>
+                <div class="code-container">
+                    <pre id="cssCode">background: linear-gradient(to right, #6c63ff 0%, #ff4e50 100%);</pre>
+                    <button class="copy-btn" id="copyCode">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
