@@ -8,8 +8,6 @@ You can view the live version of this portfolio hosted on GitHub Pages:
 
 [**View Live Portfolio**](https://maizecobra.github.io/Rohan-Kumar-portfolio.github.io/)
 
-*(Note: Replace the above URL with your actual GitHub Pages link if it's different)*
-
 ## Description
 
 This is a single-page portfolio website built to demonstrate skills in front-end development, including HTML, CSS, and JavaScript. It features sections for Home, About Me, Projects, Skills, and Contact. The site incorporates responsive design principles and subtle animations.
